@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="stylesheet" type="text/css" href="scripts/styles.css"/>
+
+</head>
+<body>
+	<ul class="topnav">
+		<li><a href="index.html">Home</a></li>
+		<li><a class="active" href="about.html">About</a></li>
+	</ul>
+    
+    <div class="container">
+        <div class="heading">
+            <h1>Part 3: Critical Reflection</h1>
+        </div>
+
+        
+        <p>
+            Words Count: 1561
+        </p>
+        <br>
+        <p>
+            The following work is a critical evaluation of the tools used in Part B.
+        </p>
+
+        <h2>Element 1:</h2>
+        <p>
+            The free tier of AWS EC2 was taken advantage of for this project to host the application. This allowed the use of t2 micro virtual machine. The main reason for this choice was the fact that it was free to use as there was no available overhead. However, it was picked over other free cloud services because Amazon T2 services provides a baseline CPU performance which it perfect for web server applications that do not need high levels of CPU consistently but there is the access a high performing CPU if necessary ("Introducing T2, the New Low-Cost, General Purpose Instance Type for Amazon EC2", 2021). This service also provides secure storage with high scalability and reliability (Obrutsky, 2016). 
+On the other hand, there are some downsides to using to using AWS’s free tier. The only hosting datacentre is Virginia and is the same for every user using this tier. Making Virginia the most used datacentre, handing 85% of the total EC2 traffic (Bermudez, 2013). While the instance may perform at the baseline capacity, they may sometimes run at an undesirable level (Lê-Quôc, 2013). At a small scale, the single CPU t2 micro may be acceptable but at a commercial level the cloud storage will need to be upgraded to meet the increased performance requirements. A decision will have to be made because there a multiple option with their own advantages and disadvantages, for example picking the most expensive VM m2.4 large may only slightly perform a cheaper alternative like the c3.2 large (Yadwadkar, 2017). Showing there is potential to overestimate what is required, therefore the needs and budget should be set so the most appropriate decision can be made. For a small web-based service, the t2 small or medium would be more than enough to cater for some growth providing more RAM and an extra CPU with the medium, on a pay as you go service costing between $0.023 and $0.0464 an hour ("Amazon EC2 T2 Instances – Amazon Web Services (AWS)", 2021). It is also important to note that AWS is more optimised for a Linux environment with red hat enterprise (Đorđević, 2014). There are other service providers also like Microsoft Azure, Azure offers a similar system, but they compute the cost per minute rather than hour. Which means the cost is calculate exactly for time the resource is running making it easier to track cost (Qaisi, 2016). Azure is easier to manage than AWS thanks to the intrusive user interface, and slightly outperforms AWS in CPU and disk operations (Đorđević, 2014).
+In summary it is totally dependant on the requirements of the system for the choice of cloud provide, the only subtle differences between the likes of AWS and Azure are that AWS would be more advantageous for a Linux based system and for a newer cloud user Azure might be the better option because of the simple user interface and more precise cost tracking.
+
+        </p>
+
+        <h2>Element 2:</h2>
+        <p>
+            HTML (Raggett, 1999).  and CSS (Bos, 2005) were used in conjunction following the best practices. For example (add best practice). Although they were used following high markup standard it does not particularly mean they are the best technologies to use for this type of task. In fact, the main rational for using HTML and CSS was the familiarity. As there was prior skill in the languages there was no learning curve, unlike if another language was used. Even though html and CSS are well defied the other languages could be incorporated with them or framework.
+            A popular CSS framework that could be incorporated is Tailwind. Tailwind is a customizable CSS framework which has some benefit over regular CSS, such as it integrates directly with HTML and it is easier to apply. Other benefits include highly customisable, utility patterns to solve several problems and making complex design easier ("Top 5 Advantages of Using Tailwind CSS", 2020). These advantages over traditional CSS can be seen as currently Tailwind is providing the greatest satisfaction ratio among developers (Klimm, 2021).
+             
+        </p>
+
+        <h2>Elemet 3:</h2>
+        <p>
+            Twitter API was used to pull tweets and details from twitter accounts associated with the university. There needs to be some consideration when using twitter’s API. Firstly, ethically only tweets by the university themselves were being pulled back from the API, because we do not have consent from users leaving comments or from retweets so to avoid any issues they were not used by the API. Only tweets from the university accounts as we have permission to access their tweets because other people may not be fully aware that their Tweets are publicly viewable (Ahmed, 2017).
+Legally it is important that the application follows Twitters terms and conditions as they state that right users have using the API and these constraints are enforced by legal means (Puschmann, 2013).
+There is currently a lack of knowledge in the legal sphere of Twitter API. As there is sensitivity with personal data it is demanded that there is a need to be careful collecting data. While showing a need for more research and transparency from Twitter, and their ethical policy (Lomborg, 2014). Also, the API is currently just pulling back the most recent tweet, and there is no filter to the data meaning potential inappropriate, sensitive data or spam could be displayed on the screen so there needs to be some data filter is this site was commercial.
+For the project, the free version of twitter API was used because it was free, but there were limits. A max of 100 tweets per request and 25k per month can be returned, if the project went commercial the premium ticket API could potential be used where 500 tweets per minute and 5 million tweets a month, but this would cost around $150 per 500 requests (Developer.twitter.com, 2021).
+Another method that could be implemented in a commercial project is twitter firehouse compliance API is a real time streaming of twitter which may be useful to use in a real-world project to track data. But it allows users to choose what data they share with twitter ("Compliance Firehose API | Twitter API", 2021). 
+
+        </p>
+
+        <h2>Element 4:</h2>
+        <p>
+            Markers for the university were used, and the only consideration needed for using images for markers is that the developer needs to ensure that they are not violating ant copyright laws and they have the required licencing to use images of their site.
+        </p>
+
+        <h2>Element 5:</h2>
+        <p>
+            The google maps API was used with the google direction and matrix services to create the map feature on the site. However free credits were being used to have access to these services, and to minimize the cost, a limit of 10 requests a day was set. Obviously in the future 10 requests would not be enough, to use the distance matrix is costs $4 per 1000 requests ("Distance Matrix API Usage and Billing | Google Developers", 2021). But these costs are quite expensive if a site receives high traffic so it would be beneficial to look at alternate solutions. One of the most popular is TomTom, who are the market leaders in personal device navigation worldwide (Piccoli, 2013). They offer similar feature such as, maps and route. But it has beneficial features like showing real time traffic flow and incidents in real time ("TomTom Maps APIs for Developers", 2021). TomTom is also better value than google offering 2500 free requests a day and $0.42 per 1000 a fraction of the cost of google ("Maps API", 2021). Therefore, in a commercial project TomTom would be superior.
+        </p>
+
+        <h2>Element 6:</h2>
+        <p>
+            The application authorised twitter accounts using OAuth2. OAuth2 is widely used in the mainstream for identity providers to support single sign on services such as such on this site (Yang, 2016). However, recently, there have multiple attacks targeting OAuth2 and it has been vulnerable to malware attacks in attempt to target end users’ credentials (Sucasas, 2016). Which suggests a need to look for another method of securing the app. Auth0 may be a solution as they offer a two-faced authentication process, which adds an extra step two authentication, users need to enter a one-time token which is dynamically generated ("Two Factor Authentication (2FA) - Auth0", 2021). The benefit of applying this method would be increased the security of the app, which would be necessary if the site were commercial, but it gives the administrators peace of mind that users passwords aren’t being compromised ("Two Factor Authentication (2FA) - Auth0", 2021).
+        </p>
+
+        <h2>Element 7:</h2>
+        <p>
+            The weather API was not utilised very effectively within this project, because the weather API works by geolocation by default was set to Newcastle, and it updates the weather to the geolocation of the markers as per the specification. However, the markers are all in proximity of each other therefore the weather does not change. To signal a change, the name of the marker is displayed in the heading. In a commercial setting this would have to be used on a much larger scale to have the desired effect as markers this close do does not take advantage of the features of the weather API and using on a city or country scale. Another consideration, was that only the current days forecast was returned at it would have better if the forecast for upcoming days were also retuned, using the API at a higher level.
+        </p>
+        
+        <h2>References:</h2>
+        
+        <p>
+Ahmed, W., Bath, P. A., & Demartini, G. (2017). Using Twitter as a data source: An overview of ethical, legal, and methodological challenges. The Ethics of Online Research.
+        </p>
+        <p>
+            <br>
+
+Bermudez, I., Traverso, S., Mellia, M., & Munafo, M. (2013, April). Exploring the cloud from passive measurements: The Amazon AWS case. In 2013 Proceedings IEEE INFOCOM (pp. 230-234). IEEE.
+</p>
+
+<p>
+
+Bos, B., Çelik, T., Hickson, I., & Lie, H. W. (2005). Cascading style sheets level 2 revision 1 (css 2.1) specification. W3C working draft, W3C, June.
+</p>
+<br>
+
+<p>
+
+Compliance Firehose API | Twitter API. Developer.twitter.com. (2021). Retrieved 29 May 2021, from https://developer.twitter.com/en/docs/twitter-api/enterprise/compliance-firehose-api/overview.
+</p>
+<br>
+
+<p>
+
+Developer.twitter.com. (2021). Retrieved 28 May 2021, from https://developer.twitter.com/en/pricing/search-30day.
+https://developers.google.com/maps/documentation/distance-matrix/usage-and-billing
+</p>
+<br>
+
+<p>
+
+Đorđević, B. S., Jovanović, S. P., & Timčenko, V. V. (2014, November). Cloud Computing in Amazon and Microsoft Azure platforms: Performance and service comparison. In 2014 22nd Telecommunications Forum Telfor (TELFOR) (pp. 931-934). IEEE.
+</p>
+<br>
+
+<p>
+
+Klimm, M. C. (2021). Design Systems for Micro Frontends-An Investigation into the Development of Framework-Agnostic Design Systems using Svelte and Tailwind CSS.
+</p>
+<br>
+
+<p>
+
+Introducing T2, the New Low-Cost, General Purpose Instance Type for Amazon EC2. Amazon Web Services, Inc. (2021). Retrieved 25 May 2021, from https://aws.amazon.com/about-aws/whats-new/2014/07/01/introducing-t2-the-new-low-cost-general-purpose-instance-type-for-amazon-ec2/.
+</p>
+<br>
+
+<p>
+
+Lê-Quôc, A., Fiedler, M., & Cabanilla, C. (2013). The top 5 AWS EC2 performance problems. Whitepaper. Datadog Inc.
+</p>
+<br>
+
+<p>
+
+Lomborg, S., & Bechmann, A. (2014). Using APIs for data collection on social media. The Information Society, 30(4), 256-265.
+</p>
+<br>
+
+<p>
+
+Maps API. TomTom Developer Portal. (2021). Retrieved 29 May 2021, from https://developer.tomtom.com/store/maps-api.
+</p>
+<br>
+
+<p>
+
+Obrutsky, S. (2016). Cloud storage: Advantages, disadvantages and enterprise solutions for business. In Proceedings of the Eastern Institute of Technology Conference (p. 10).
+</p>
+<br>
+
+<p>
+
+Piccoli, G., & Pigni, F. (2013). Harvesting external data: The potential of digital data streams. MIS Quarterly Executive, 12(1).
+</p>
+<br>
+
+<p>
+
+Puschmann, C., & Burgess, J. (2013). The politics of Twitter data.
+</p>
+<br>
+
+<p>
+
+Qaisi, L. M., & Aljarah, I. (2016, July). A twitter sentiment analysis for cloud providers: a case study of Azure vs. AWS. In 2016 7th International Conference on Computer Science and Information Technology (CSIT) (pp. 1-6). IEEE.
+</p>
+<br>
+
+<p>
+
+Raggett, D., Le Hors, A., & Jacobs, I. (1999). HTML 4.01 Specification. W3C recommendation, 24.
+</p>
+<br>
+
+<p>
+
+Sucasas, V., Mantas, G., Radwan, A., & Rodriguez, J. (2016, May). An OAuth2-based protocol with strong user privacy preservation for smart city mobile e-Health apps. In 2016 IEEE International Conference on Communications (ICC) (pp. 1-6). IEEE.
+</p>
+<br>
+
+<p>
+
+TomTom Maps APIs for Developers. TomTom Developer Portal. (2021). Retrieved 29 May 2021, from https://developer.tomtom.com/tomtom-maps-apis-developers.
+</p>
+<br>
+
+<p>
+
+Top 5 Advantages of Using Tailwind CSS. Grazitti Interactive. (2020). Retrieved 23 May 2021, from https://www.grazitti.com/blog/top-5-advantages-of-using-tailwind-css/#:~:text=Tailwind%20CSS%20creates%20small%20utilities,the%20help%20of%20this%20framework.
+</p>
+<br>
+
+<p>
+
+Two Factor Authentication (2FA) - Auth0. Auth0. (2021). Retrieved 27 May 2021, from https://auth0.com/learn/two-factor-authentication/.
+</p>
+<br>
+
+<p>
+
+Yadwadkar, N. J., Hariharan, B., Gonzalez, J. E., Smith, B., & Katz, R. H. (2017, September). Selecting the best vm across multiple public clouds: A data-driven performance modeling approach. In Proceedings of the 2017 Symposium on Cloud Computing (pp. 452-465).
+</p>
+<br>
+
+<p>
+Yang, R., Lau, W. C., & Liu, T. (2016). Signing into one billion mobile app accounts effortlessly with oauth2. 0. Black Hat Europe.
+</p>
+
+
+    </div>
+</body>
+</html>

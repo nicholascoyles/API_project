@@ -1,0 +1,149 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Home page</title>
+
+<link rel="stylesheet" type="text/css" href="scripts/styles.css"/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAh3zLr4j9E0mZkKLnphjOhQ5lejxwf49k&callback=initMap" defer></script> 
+</head>
+<body>
+	<!--Nav bar-->
+	<ul class="topnav">
+		<li><a class="active" href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+	</ul>
+
+	<!--Weather-->
+<div class="container">
+	<div class="heading">
+		<h1>Today's Weather</h1>
+	</div>
+
+	<div class="row">
+
+		<div class="card">
+			<div class="card-header">
+				<h1>Sunrise/Sunset</h1>
+			</div>
+			<div class="card-body">
+				<p class="sunset">Sunset: </p>
+				<p class="sunrise">Sunrise: </p>
+
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-header">
+				<div class="text">
+					<h1 class="location"></h1>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="info">
+					<div class="icon">
+						<img class="icon">
+					</div>
+					<p class="weather"></p>
+					<p class="temp"></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-header">
+				<h1>Details</h1>
+			</div>
+			<div class="card-body">
+				<div class="info">
+					<ul>
+						<li class="feels-like">Feels like: </li>
+						<li class="humidity">Humidity: </li>
+						<li class="pressure">Pressure: </li>
+						<li></li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+			
+	</div>
+</div>
+
+
+	<!--Mode of transport-->
+	<div class="content">
+		<button class="button" id="btnGetDirections" type="button">Get Directions</button>
+			<select class="form-control" id="mode">
+				<option value="WALKING">Walking</option>
+				<option value="DRIVING">Driving</option>
+				<option value="BICYCLING">Cycling</option>
+				<option value="TRANSIT">Transit</option>
+			  </select>
+		<p>click a point, then select a marker and click the button to get the distance!</p>
+		<!--Map-->
+		<div class="row">
+			<div id="map"></div>
+		</div>
+
+
+				<!--Distance infos-->
+				<div class="wrapper">
+					<div class="row">
+						<div class="section">
+							<div id="distance-info"></div>
+						</div>
+						<div class="section">
+							<div id="directionsPanel"></div>
+						</div>
+					</div>
+				</div>
+		<!--Twitter feeds-->
+		<div class="row">
+			<div class="card">
+				<div class="card-header">
+					<h1 id="tweet-heading">UNI Twitter Feed</h1>
+				</div>
+			<div class="card-body">
+				<ul id="tweet-list">
+				</ul>
+			</div>
+			</div>
+			<div class="card">
+				<div class="card-header">
+					<h3 id="account-name">Hover over a marker to see feed</h3>
+				</div>
+				<div class="card-body">
+						<ul id="account-tweets">
+						</ul>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-header">
+					<h3 id="account-name">Post a tweet</h3>
+				</div>
+				<div class="card-body">
+				<!--Post a tweet-->
+				<form action='3-step-oauth/twitter_login.php' method='POST'>
+					<label>Tweet: </label>
+					<input name='tweet' type='text' id="tweet" name="tweet" size='50' />
+
+					<input name='mySubmit' class="button"  type='submit' value='Post!' />
+				</form>
+
+				</div>
+			</div>
+		</div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
